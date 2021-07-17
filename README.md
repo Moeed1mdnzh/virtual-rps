@@ -38,19 +38,19 @@ guid you.Keep your hand in the bounding box and pay attention to the printed mes
 #### Train
 Use `cd ..` to return to the project directory and run 
 ```python
-trainGesture.py
+python trainGesture.py
 ``` 
 to train the cnn model on the data.Remember you can also use google colab to train the model without needing a particular gpu on your own machine which i did too but you'll need
 to do a couple of extra things such as uploading the data on google colab.
 #### Convert
 Convert the model to a tensorflow lite model to run the model on cpu without having to worry about low fps frames by running
 ```python
-liteConverter.py
+python liteConverter.py
 ``` 
 ### Play
 Eventually you can play the game using the following command
 ```python
-main.py
+python main.py
 ``` 
 Just to give a quick guide about the game buttons <br />
 ![](https://github.com/Moeed1mdnzh/virtual-rps/blob/main/images/help.jpg) <br />
