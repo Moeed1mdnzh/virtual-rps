@@ -49,7 +49,7 @@ main.py
 ``` 
 Just to give a quick guide about the game buttons <br />
 ![](https://github.com/Moeed1mdnzh/virtual-rps/blob/main/images/help.jpg) <br />
-The yellow bounding box is for gesture detection.Once you move your hand in the box, the program waits 0.5 seconds for you to finalize your hand gesture and then detects.<br />
+The yellow bounding box is for gesture detection.Once you keep your hand in the box, the program waits 0.5 seconds for you to finalize your hand gesture and then detects.<br />
 The top *left* and *right* buttons are obvious that are meant to change the location of the yellow bounding box to the opposite direction for your main hand.You can use them
 by shaking your index finger up and down (**Almost like clicking but more dramatic**), if it didn't work do it more until it works properly.<br />
 The rounds and scores are also shown
