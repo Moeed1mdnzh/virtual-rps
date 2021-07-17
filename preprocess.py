@@ -24,7 +24,7 @@ class Preprocess:
 		self.texts = [f"Your score : {self.self_score}", f"Computer's score : {self.computer_score}"]
 		self.x, self.pre_y = None, None
 
-	def selectBox(self, frame : np.ndarray) -> np.ndarray: #Choose the left or right box based on your main hand
+	def selectBox(self, frame : np.ndarray) -> tuple: #Choose the left or right box based on your main hand
 		cv2.rectangle(frame, (120, 0), (256, 64), (100, 100, 255), self.thicknesses[0])
 		cv2.rectangle(frame, (256, 0), (384, 64), (255, 100, 100), self.thicknesses[1])
 		self.thicknesses = [4, 4]
@@ -57,14 +57,14 @@ class Preprocess:
 		#print(box_loc)
 		return frame, self.box_loc
 
-	def displayDetails(self, frame : np.ndarray) -> np.ndarray: #Displaying scores and rounds
+	def displayDetails(self, frame : np.ndarray) -> tuple: #Displaying scores and rounds
 		self.texts = [f"Your score : {self.self_score}", f"Computer's score : {self.computer_score}"]
 		cv2.putText(frame, self.texts[0], (10 ,370), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (180, 255, 180), 2)
 		cv2.putText(frame, self.texts[1], (332 ,370), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (180, 255, 180), 2)
 		cv2.putText(frame, f"Round : {self.rounds}", (211, 84), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (150, 255, 150), 2)
 		return frame
 
-	def estimate(self, frame : np.ndarray) -> np.ndarray: #Hand estimation in the box for classification
+	def estimate(self, frame : np.ndarray) -> tuple: #Hand estimation in the box for classification
 		if self.box == self.boxes[1]:
 			cropped = frame[self.box[0][1]:self.box[1][1], self.box[1][0]:self.box[0][0]]
 		else:
@@ -94,7 +94,7 @@ class Preprocess:
 		cv2.rectangle(frame, self.box[0], self.box[1], (140, 255, 255), 3)
 		return frame, self.sample
 
-	def countDown(self, frame : np.ndarray, pre : float) -> np.ndarray : #Whenever a hand comes inside the box, wait 0.5 seconds and then check again
+	def countDown(self, frame : np.ndarray, pre : float) -> tuple : #Whenever a hand comes inside the box, wait 0.5 seconds and then check again
 		spent = round(time.time()-pre, 1)
 		if spent <= 0.5:
 			cv2.putText(frame, f"{spent}", (232, 296), cv2.FONT_HERSHEY_COMPLEX, 1.8, (66, 123, 245), 5)
@@ -103,7 +103,7 @@ class Preprocess:
 			return frame, True
 		return frame, False
 
-	def preprocess(self, frame : np.ndarray, self_score : int=0, computer_score : int=0, rounds : int=1) -> np.ndarray: #Main function
+	def preprocess(self, frame : np.ndarray, self_score : int=0, computer_score : int=0, rounds : int=1) -> tuple: #Main function
 		self.self_score = self_score
 		self.computer_score = computer_score
 		self.rounds = rounds
