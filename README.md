@@ -1,7 +1,7 @@
 # About-The-Game
 This is the simple classic rock paper scissors game along the creativity of computer vision where your computer tries to estimate your hand and detect the gesture of it.
 The game has a special part that the computer intends to predict your next moves based on a pattern by ***regression***.Pretty cool, isn't it?
-the game has 3 rounds and whoever reaches 5 scores will win the specific round.Computer makes random choices in the first round to collect data about your movements and
+The game has 3 rounds and whoever reaches 5 scores will win the specific round.Computer makes random choices in the first round to collect data about your movements and
 will start the predictive choices in the second round and will also continue to collect more and more data.
 
 ## DL-Algorithms
