@@ -4,7 +4,7 @@ The game has a special part that the computer intends to predict your next moves
 The game has 3 rounds and whoever reaches 5 scores will win the specific round.Computer makes random choices in the first round to collect data about your movements and
 will start the predictive choices in the second round and will also continue to collect more and more data.
 
-## DL-Algorithms
+## Algorithms
 ### Hand-Estimation
 For this part, google's open source ***MediaPipe*** is used in the game.
 ### Gesture-Detection
@@ -13,6 +13,11 @@ cnn models I luckily achieved about 100 percent accuracy on the validation set w
 data augmentation repo <a href="https://github.com/Moeed1mdnzh/Data-Augmentor">Data_Augmentor</a> is used to perform the best on the training set.
 ![](https://github.com/Moeed1mdnzh/virtual-rps/blob/main/images/performance.png)
 ***As you can see the model did a great job on learning using the SGD optimizer***
+
+### Move-Predictor
+I used ensembled regressions to predict the next move of the player.Ensemble of <br /> *DecisionTreeRegressor*, 
+<br /> *HuberRegressor*, <br /> *LinearRegression*, <br /> *RandomForestRegressor* and
+<br />*GradientBoostingRegressor*
 
 ## Steps
 #### Preprocess
