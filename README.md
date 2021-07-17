@@ -15,8 +15,8 @@ data augmentation repo <a href="https://github.com/Moeed1mdnzh/Data-Augmentor">D
 ***As you can see the model did a great job on learning using the SGD optimizer***
 
 ### Move-Predictor
-I used ensembled regressions to predict the next move of the player.Ensemble of <br /> *DecisionTreeRegressor*, 
-<br /> *HuberRegressor*, <br /> *LinearRegression*, <br /> *RandomForestRegressor* and
+I used ensembled regressions to predict the next move of the player.Ensemble of <br /> *DecisionTreeRegressor* 
+<br /> *HuberRegressor* <br /> *LinearRegression* <br /> *RandomForestRegressor* 
 <br />*GradientBoostingRegressor*
 
 ## Steps
