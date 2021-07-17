@@ -1,11 +1,10 @@
 import cv2
 import numpy as np 
-from time import sleep
 from tensorflow import lite
 from preprocess import Preprocess
 from predictor import Classifier, MovePredictor
 
-cam = cv2.VideoCapture(1)
+cam = cv2.VideoCapture(0)
 names = ["rock.png", "paper.png", "scissors.png"]
 images = [cv2.resize(cv2.imread(f"assests//{name}") if name != "rock.png" else cv2.flip(cv2.imread(f"assests//{name}"), 1), (128, 128)) for name in names]
 X, y = [], []
