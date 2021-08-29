@@ -1,4 +1,4 @@
-# About-The-Game
+# About The Game
 This is the simple classic rock paper scissors game along the creativity of computer vision where your computer tries to estimate your hand and detect the gesture of it.
 The game has a special part that the computer intends to predict your next moves based on a pattern by ***regression***.Pretty cool, isn't it?
 The game has 3 rounds and whoever reaches 5 scores will win the specific round.Computer makes random choices in the first round to collect data about your movements and
@@ -14,7 +14,7 @@ data augmentation repo <a href="https://github.com/Moeed1mdnzh/Data-Augmentor">D
 ![](https://github.com/Moeed1mdnzh/virtual-rps/blob/main/images/performance.png)
 ***As you can see the model did a great job on learning using the SGD optimizer***
 
-### Move-Predictor
+### Move Predictor
 I used ensembled regressions to predict the next move of the player. <br /> Ensemble of <br /> *DecisionTreeRegressor* 
 <br /> *HuberRegressor* <br /> *LinearRegression* <br /> *RandomForestRegressor* 
 <br />*GradientBoostingRegressor*
