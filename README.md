@@ -48,7 +48,7 @@ Convert the model to a tensorflow lite model to run the model on cpu without hav
 python liteConverter.py
 ``` 
 ### Play
-Eventually you can play the game using the following command
+Eventually you can play the game using the following command.
 ```python
 python main.py
 ``` 
