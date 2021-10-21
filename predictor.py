@@ -14,7 +14,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 class Classifier:
 	def __init__(self, interpreter):
 		self.interpreter = interpreter
-		interpreter.allocate_tensors()
+		self.interpreter.allocate_tensors()
 		self.input_details = self.interpreter.get_input_details()
 		self.output_details = self.interpreter.get_output_details()
 
