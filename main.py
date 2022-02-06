@@ -6,7 +6,7 @@ from predictor import Classifier, MovePredictor
 
 cam = cv2.VideoCapture(0)
 names = ["rock.png", "paper.png", "scissors.png"]
-images = [cv2.resize(cv2.imread(f"assests//{name}") if name != "rock.png" else cv2.flip(cv2.imread(f"assests//{name}"), 1), (128, 128)) for name in names]
+images = [cv2.resize(cv2.imread(f"assets//{name}") if name != "rock.png" else cv2.flip(cv2.imread(f"assets//{name}"), 1), (128, 128)) for name in names]
 X, y = [], []
 rounds = 1
 player_score = 0 
